@@ -1,0 +1,19 @@
+name: Run PowerShell Script
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-powershell:
+    runs-on: windows-latest
+    steps:
+      # Step 1: Checkout the repository code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Run the PowerShell script
+      - name: Execute PowerShell script
+        shell: pwsh
+        run: ./script.ps1
