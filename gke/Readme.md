@@ -1,4 +1,4 @@
-# GCP GKE flow logs Data Connector Configuration Guide
+# Google Kubernetes Engine logs Data Connector Configuration Guide
 
 For ingesting data into Microsoft Sentinel , We need few of the resources created/ready on google console , Which will be done with the help of terraform script.
 
@@ -11,7 +11,7 @@ For ingesting data into Microsoft Sentinel , We need few of the resources create
 * Service account with permissions to get and consume from subscription.
 
 ### Configurations steps
-1. Select the project from where the GKE Flow logs has to be collected
+1. Select the project from where the Google Kubernetes Engine logs has to be collected
 2. Open the cloud shell , by clicking activate cloud shell button on the top right
 
    ![image](https://github.com/user-attachments/assets/1666158e-8295-4c2f-a8c7-16ede37b8fb1)
