@@ -10,7 +10,7 @@ terraform {
 }
 
 data "google_project" "project" {
-  project_id = "msccp-test"
+  project_id = "Enter Project Id"
 }
 
 variable "topic-name" {
@@ -50,7 +50,7 @@ resource "google_logging_project_sink" "sentinel-sink" {
   destination = "pubsub.googleapis.com/projects/${data.google_project.project.project_id}/topics/${var.topic-name}"
   depends_on = [google_pubsub_topic.sentinelgooglekubernetes-topic]
 
-  filter = "(resource.type=\"k8s_cluster\")"
+  filter = "(resource.type=\"k8s_cluster\") OR logName =~ \".*container.googleapis.com%2Fapiserver$\" OR logName =~ \".*container.googleapis.com%2Fscheduler$\" OR logName =~ \".*container.googleapis.com%2Fcontroller-manager$\"OR logName =~ \".*container.googleapis.com%2Fhpa-controller$\"OR logName =~ \".*container.googleapis.com%2Fstdout$\"OR logName =~ \".*container.googleapis.com%2Fstderr$\""
   unique_writer_identity = true
 }
 
@@ -60,7 +60,7 @@ resource "google_logging_organization_sink" "sentinel-organization-sink" {
   org_id = var.organization-id
   destination = "pubsub.googleapis.com/projects/${data.google_project.project.project_id}/topics/${var.topic-name}"
 
-  filter = "(resource.type=\"k8s_cluster\")"
+  filter = "(resource.type=\"k8s_cluster\") OR logName =~ \".*container.googleapis.com%2Fapiserver$\" OR logName =~ \".*container.googleapis.com%2Fscheduler$\" OR logName =~ \".*container.googleapis.com%2Fcontroller-manager$\"OR logName =~ \".*container.googleapis.com%2Fhpa-controller$\"OR logName =~ \".*container.googleapis.com%2Fstdout$\"OR logName =~ \".*container.googleapis.com%2Fstderr$\""
   include_children = true
 }
 
