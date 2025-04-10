@@ -11,7 +11,7 @@ To ingest data into Microsoft Sentinel, we need to create and configure few reso
 
 1. Download both the CloudFormation Templates in this folder:
    - [OIDCWebIdProvider.json](https://github.com/Alekhya0824/GithubValidationREPO/blob/main/AWS%20S3%20Server%20Access%20Logs/OIDCWebIdProvider.json)
-   - [SecurityHubResourcesAndConfig.json](SecurityHubResourcesAndConfig.json)
+   - [AWSS3ServerAccessAndConfig.json](https://github.com/Alekhya0824/GithubValidationREPO/blob/main/AWS%20S3%20Server%20Access%20Logs/AWSS3ServerAccessAndConfig.json)
 
 2. Go to the [AWS CloudFormation Stacks](https://console.aws.amazon.com/cloudformation/home) page.
 
