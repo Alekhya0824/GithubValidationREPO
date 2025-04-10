@@ -22,7 +22,7 @@ To ingest data into Microsoft Sentinel, we need to create and configure few reso
      3. Click on "Choose an existing template", "Upload a template file" and select the `OIDCWebIdProvider.json` file.
      4. Click "Next" and follow the prompts to create the stack.
 
-   - Next, create a stack using the `SecurityHubResourcesAndConfig.json` template:
+   - Next, create a stack using the `AWSS3ServerAccessAndConfig.json` template:
      1. Click on "Create stack".
      2. Choose the "With new resources" option.
      3. Click on "Choose an existing template", "Upload a template file" and select the `AWSS3ServerAccessAndConfig.json` file.
