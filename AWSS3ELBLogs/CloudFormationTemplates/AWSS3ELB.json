@@ -514,7 +514,7 @@
 					"Ref": "IamRoleName"
 				},
 				"AssumeRolePolicyDocument": {
-					"Fn::Sub": "{\"Version\": \"2012-10-17\",\"Statement\": [{\"Effect\": \"Allow\",\"Principal\": {\"Federated\": \"arn:aws:iam::${AWS::AccountId}:oidc-provider/sts.windows.net/33e01921-4d64-4f8c-a055-5bdaffd5e33d/\"},\"Action\": \"sts:AssumeRoleWithWebIdentity\",\"Condition\": {\"StringEquals\": {\"sts.windows.net/33e01921-4d64-4f8c-a055-5bdaffd5e33d/:aud\": \"api://1462b192-27f7-4cb9-8523-0f4ecb54b47e\",\"sts:RoleSessionName\": \"MicrosoftSentinel_${SentinelWorkspaceId}\"}}}]}"
+					"Fn::Sub": "{\"Version\": \"2012-10-17\",\"Statement\": [{\"Effect\": \"Allow\",\"Principal\": {\"Federated\": \"arn:aws:iam::${AWS::AccountId}:oidc-provider/sts.windows.net/33e01921-4d64-4f8c-a055-5bdaffd5e33d/\"},\"Action\": \"sts:AssumeRoleWithWebIdentity\",\"Condition\": {\"StringEquals\": {\"sts:aud\": \"api://1462b192-27f7-4cb9-8523-0f4ecb54b47e\",\"sts:RoleSessionName\": \"MicrosoftSentinel_${SentinelWorkspaceId}\"}}}]}"
 				},
 				"Policies": [
 					{
