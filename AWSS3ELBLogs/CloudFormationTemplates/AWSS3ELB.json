@@ -312,7 +312,9 @@
 					"Statement": [
 						{
 							"Effect": "Allow",
-							"Principal": "*",
+							"Principal": { 
+								"AWS": {"Fn::Sub": "arn:aws:iam::${AWS::AccountId}:role/${IamRoleName}"}
+							},
 							"Action": [
 								"SQS:ReceiveMessage",
 								"SQS:DeleteMessage",
@@ -362,7 +364,9 @@
 					"Statement": [
 						{
 							"Effect": "Allow",
-							"Principal": "*",
+							"Principal": { 
+								"AWS": {"Fn::Sub": "arn:aws:iam::${AWS::AccountId}:role/${IamRoleName}"}
+							},
 							"Action": [
 								"SQS:ReceiveMessage",
 								"SQS:DeleteMessage",
@@ -412,7 +416,9 @@
 					"Statement": [
 						{
 							"Effect": "Allow",
-							"Principal": "*",
+							"Principal": { 
+								"AWS": {"Fn::Sub": "arn:aws:iam::${AWS::AccountId}:role/${IamRoleName}"}
+							},
 							"Action": [
 								"SQS:ReceiveMessage",
 								"SQS:DeleteMessage",
@@ -462,7 +468,9 @@
 					"Statement": [
 						{
 							"Effect": "Allow",
-							"Principal": "*",
+							"Principal": { 
+								"AWS": {"Fn::Sub": "arn:aws:iam::${AWS::AccountId}:role/${IamRoleName}"}
+							},
 							"Action": [
 								"SQS:ReceiveMessage",
 								"SQS:DeleteMessage",
